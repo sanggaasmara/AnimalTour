@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mediaLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MediaActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/mediaTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="" />
+
+        <ViewFlipper
+            android:id="@+id/mediaFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/prevButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:text="Prev" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:text="Prev" />
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <fragment
+        android:id="@+id/youtubeFrame"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></fragment>
+    </androidx.cardview.widget.CardView>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/finishButton"
+            android:scaleType="fitCenter"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_prev"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/invertButton"
+            android:scaleType="fitCenter"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/icon_next"/>
+    </RelativeLayout>
+</LinearLayout>
